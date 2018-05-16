@@ -21,3 +21,8 @@ only a simple 'git clone' should be necessary
 * **Nickolas Pingel** - *Initial work* - [nipingel](https://github.com/nipingel)
 
 ## Scripts
+
+### calcSysFlux_Grid.pro
+
+This GBTIDL script averages the OFF power from the six offs associated with a calibration grid observation, while also computing the maximum power in associated ON scans of the grid (Poff and Pon, respectively). The maximum power value is taken to be the ON associated power. The system equivalent flux density is computed by using Equation 1 from Perley and Butler 2017 based on the user provided calSource name and is given in Jy. The equation is: 
+Ssys = Ssrc*Poff/(Pon-Poff)
