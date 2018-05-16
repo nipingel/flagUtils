@@ -1,0 +1,51 @@
+.compile PAF_OnOff.pro
+
+;; beam 0
+beamNum = '0'
+velRange=[-750, -325, 100, 1400]
+fileStr = '../../data/AGBT16B_400/AGBT16B_400_14/rawBeamformedSpectra/M31_Cloud6/7Pt/AGBT16B_400_14_M31_Cloud6_Beam' + beamNum + '.fits'
+filein, fileStr
+PAF_OnOff, 'M31_Cloud6', Tsys_Y = 11.71, Tsys_X = 11.71, chanRange = velRange, order = 3, fileout = 'M31_Cloud6_Beam' + beamNum + '_7Pt_edge.fits'
+
+;; beam 1
+beamNum = '1'
+velRange=[-750, -325, 100, 1400]
+fileStr = '../../data/AGBT16B_400/AGBT16B_400_14/rawBeamformedSpectra/M31_Cloud6/7Pt/AGBT16B_400_14_M31_Cloud6_Beam' + beamNum + '.fits'
+filein, fileStr
+PAF_OnOff, 'M31_Cloud6', Tsys_Y = 13.5, Tsys_X = 13.5, chanRange = velRange, order = 3, fileout = 'M31_Cloud6_Beam' + beamNum + '_7Pt_edge.fits'
+
+;; beam 2
+beamNum = '2'
+velRange=[-750, -325, 100, 1400]
+fileStr = '../../data/AGBT16B_400/AGBT16B_400_14/rawBeamformedSpectra/M31_Cloud6/7Pt/AGBT16B_400_14_M31_Cloud6_Beam' + beamNum + '.fits'
+filein, fileStr
+PAF_OnOff, 'M31_Cloud6', Tsys_Y = 12.32, Tsys_X = 12.32, chanRange = velRange, order = 3, fileout = 'M31_Cloud6_Beam' + beamNum + '_7Pt_edge.fits'
+
+;; beam 3
+beamNum = '3'
+velRange=[-750, -325, 100, 1400]
+fileStr = '../../data/AGBT16B_400/AGBT16B_400_14/rawBeamformedSpectra/M31_Cloud6/7Pt/AGBT16B_400_14_M31_Cloud6_Beam' + beamNum + '.fits'
+filein, fileStr
+PAF_OnOff, 'M31_Cloud6', Tsys_Y = 14.44, Tsys_X = 14.44, chanRange = velRange, order = 3, fileout = 'M31_Cloud6_Beam' + beamNum + '_7Pt_edge.fits'
+
+;; beam 4
+beamNum = '4'
+velRange=[-750, -325, 100, 1400]
+fileStr = '../../data/AGBT16B_400/AGBT16B_400_14/rawBeamformedSpectra/M31_Cloud6/7Pt/AGBT16B_400_14_M31_Cloud6_Beam' + beamNum + '.fits'
+filein, fileStr
+PAF_OnOff, 'M31_Cloud6', Tsys_Y = 15.19, Tsys_X = 15.19, chanRange = velRange, order = 3, fileout = 'M31_Cloud6_Beam' + beamNum + '_7Pt_edge.fits'
+
+;; beam 5
+beamNum = '5'
+velRange=[-750, -325, 100, 1400]
+fileStr = '../../data/AGBT16B_400/AGBT16B_400_14/rawBeamformedSpectra/M31_Cloud6/7Pt/AGBT16B_400_14_M31_Cloud6_Beam' + beamNum + '.fits'
+filein, fileStr
+PAF_OnOff, 'M31_Cloud6', Tsys_Y = 15.07, Tsys_X = 15.07, chanRange = velRange, order = 3, fileout = 'M31_Cloud6_Beam' + beamNum + '_7Pt_edge.fits'
+
+;; beam 6
+beamNum = '6'
+velRange=[-750, -325, 100, 1400]
+fileStr = '../../data/AGBT16B_400/AGBT16B_400_14/rawBeamformedSpectra/M31_Cloud6/7Pt/AGBT16B_400_14_M31_Cloud6_Beam' + beamNum + '.fits'
+filein, fileStr
+PAF_OnOff, 'M31_Cloud6', Tsys_Y = 14.81, Tsys_X = 14.81, chanRange = velRange, order = 3, fileout = 'M31_Cloud6_Beam' + beamNum + '_7Pt_edge.fits'
+

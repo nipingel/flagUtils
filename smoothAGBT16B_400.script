@@ -1,0 +1,51 @@
+.compile smooth_shift_Comb
+;; beam 0
+beamNum = '0'
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb.fits'
+filein, fileStr
+smooth_shift_Comb, object, 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb_ss.fits', kernel = kern, bm = beamNum
+
+;; beam 1
+beamNum = '1'
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb.fits'
+filein, fileStr
+smooth_shift_Comb, object, 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb_ss.fits', kernel = kern, bm = beamNum
+
+;; beam 2
+beamNum = '2'
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb.fits'
+filein, fileStr
+smooth_shift_Comb, object, 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb_ss.fits', kernel = kern, bm = beamNum
+
+;; beam 3
+beamNum = '3'
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb.fits'
+filein, fileStr
+smooth_shift_Comb, object, 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb_ss.fits', kernel = kern, bm = beamNum
+
+;; beam 4
+beamNum = '4'
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb.fits'
+filein, fileStr
+smooth_shift_Comb, object, 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb_ss.fits', kernel = kern, bm = beamNum
+
+;; beam 5
+beamNum = '5'
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb.fits'
+filein, fileStr
+smooth_shift_Comb, object, 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb_ss.fits', kernel = kern, bm = beamNum
+
+;; beam 6
+beamNum = '6'
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb.fits'
+filein, fileStr
+smooth_shift_Comb, object, 'AGBT16B_400_NGC6946_Beam' + beamNum + '_edge_Comb_ss.fits', kernel = kern, bm = beamNum
+
+

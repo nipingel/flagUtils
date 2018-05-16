@@ -1,0 +1,57 @@
+;; script to run PAF_edgeoff on all data collected during AGBT17B_360 (Jan-Feb 2018) FLAG run
+;; Writte;n by: Nick Pingel (03/6/18)
+;; user m;ay have to change the project, object, fileStr path, and tSysPathX/Y variables below to point towards the collection of FITS files one wishes to process
+.compile ;PAF_edgeoffkeep.pro
+.compile ;smooth_shift.pro
+
+!EXCEPT=0 ;; suppress math warnings
+
+;; beam 0, 13th session
+beamNum = '0'
+chanRange=[500, 1550, 2300, 3000]
+fileStr =  'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC6946', Tsys_Y = 12.51, Tsys_X = 12.51, chanRange = chanRange, order = 3, fileout = 'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_edge_chanBlank.fits'
+
+;; beam 1, 13th session
+beamNum = '1'
+chanRange=[500, 1550, 2300, 3000]
+fileStr =  'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC6946', Tsys_Y = 13.91, Tsys_X = 13.91, chanRange = chanRange, order = 3, fileout = 'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_edge_chanBlank.fits'
+
+;; beam 2, 13th session
+beamNum = '2'
+chanRange=[500, 1550, 2300, 3000]
+fileStr =  'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC6946', Tsys_Y = 13.45, Tsys_X = 13.45, chanRange = chanRange, order = 3, fileout = 'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_edge_chanBlank.fits'
+
+;; beam 3, 13th session
+beamNum = '3'
+chanRange=[500, 1550, 2300, 3000]
+fileStr =  'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC6946', Tsys_Y = 14.65, Tsys_X = 14.65, chanRange = chanRange, order = 3, fileout = 'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_edge_chanBlank.fits'
+
+;; beam 4, 13th session
+beamNum = '4'
+chanRange=[500, 1550, 2300, 3000]
+fileStr =  'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC6946', Tsys_Y = 14.88, Tsys_X = 14.88, chanRange = chanRange, order = 3, fileout = 'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_edge_chanBlank.fits'
+
+;; beam 5, 13th session
+beamNum = '5'
+chanRange=[500, 1550, 2300, 3000]
+fileStr =  'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC6946', Tsys_Y = 14.77, Tsys_X = 14.77, chanRange = chanRange, order = 3, fileout = 'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_edge_chanBlank.fits'
+
+;; beam 6, 13th session
+beamNum = '6'
+chanRange=[500, 1550, 2300, 3000]
+fileStr =  'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC6946', Tsys_Y = 14.75, Tsys_X = 14.75, chanRange = chanRange, order = 3, fileout = 'AGBT16B_400_13_NGC6946_Beam' + beamNum + '_edge_chanBlank.fits'
+

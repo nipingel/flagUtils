@@ -1,0 +1,173 @@
+;; script to run PAF_edgeoff on all data collected during AGBT17B_360 (Jan-Feb 2018) FLAG run
+;; Written by: Nick Pingel (03/6/18)
+;; user may have to change the project, object, fileStr path, and tSysPathX/Y variables below to point towards the collection of FITS files one wishes to process
+.compile PAF_edgeoffkeep.pro
+.compile smooth_shift.pro
+
+!EXCEPT=0 ;; suppress math warnings
+
+projectID = 'AGBT16B_360'
+sessionArr = ['03', '04', '05', '07']
+calType = ['grid', 'grid', '7Pt-Cal1', 'grid']
+object = 'NGC4258_Field'
+
+;; channel range to apply to the fit
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+
+;;AGBT17B_360_05
+dataPath = '/home/scratch/npingel/FLAG/data/AGBT17B_360/AGBT17B_360_05/calibratedSpectra/NGC4258_Field/'
+tSysPathX = '/home/scratch/npingel/FLAG/data/AGBT17B_360/AGBT17B_360_05/Tsys/tSys_X_AGBT17B_360_05_7Pt-Cal1.txt'
+tSysPathY = '/home/scratch/npingel/FLAG/data/AGBT17B_360/AGBT17B_360_05/Tsys/tSys_X_AGBT17B_360_05_7Pt-Cal1.txt'
+
+;; read in text file for XX/YY pol
+dataX = read_ASCII(tSysPathX)
+dataY = read_ASCII(tSysPathY)
+tSysData_X = dataX.field1
+tSysData_Y = dataY.field1
+
+;; beam 0
+beamNum = '0'
+;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '.fits'
+;filein, fileStr
+;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, order = 3, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam'  + beamNum + '_edge_Baselined.fits'
+
+;;filein, fileStr
+;;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined.fits'
+filein, fileStr
+smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined_ss.fits', kernel = kern
+
+;;kern = [0.288422719, 1, 1, 0.288422719]
+;;fileStr = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+;;filein, fileStr
+;;smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline_ss.fits', kernel = kern
+
+;; beam 1
+beamNum = '1'
+;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '.fits'
+;filein, fileStr
+;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, order = 3, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam'  + beamNum + '_edge_Baselined.fits'
+
+;;filein, fileStr
+;;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined.fits'
+filein, fileStr
+smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined_ss.fits', kernel = kern
+
+;;kern = [0.288422719, 1, 1, 0.288422719]
+;;fileStr = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+;;filein, fileStr
+;;smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline_ss.fits', kernel = kern
+
+;; beam 2
+beamNum = '2'
+;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '.fits'
+;filein, fileStr
+;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, order = 3, raDecLimits = [184.909, 185.661, 45.700, 46.016],  fileout = 'AGBT17B_360_05_NGC4258_Field_Beam'  + beamNum + '_edge_Baselined.fits'
+
+;;filein, fileStr
+;;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined.fits'
+filein, fileStr
+smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined_ss.fits', kernel = kern
+
+;;kern = [0.288422719, 1, 1, 0.288422719]
+;;fileStr = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+;;filein, fileStr
+;;smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + 'beam_edge_noBaseline_ss.fits', kernel = kern
+
+;; beam 3
+beamNum = '3'
+;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '.fits'
+;filein, fileStr
+;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, order = 3, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam'  + beamNum + '_edge_Baselined.fits'
+
+;;filein, fileStr
+;;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined.fits'
+filein, fileStr
+smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined_ss.fits', kernel = kern
+
+;;kern = [0.288422719, 1, 1, 0.288422719]
+;;fileStr = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+;;filein, fileStr
+;;smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline_ss.fits', kernel = kern
+
+;; beam 4
+beamNum = '4'
+;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '.fits'
+;filein, fileStr
+;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, order = 3, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam'  + beamNum + '_edge_Baselined.fits'
+
+;;filein, fileStr
+;;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined.fits'
+filein, fileStr
+smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined_ss.fits', kernel = kern
+
+;;kern = [0.288422719, 1, 1, 0.288422719]
+;;fileStr = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+;;filein, fileStr
+;;smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline_ss.fits', kernel = kern
+
+;; beam 5
+beamNum = '5'
+;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '.fits'
+;filein, fileStr
+;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, order = 3, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam'  + beamNum + '_edge_Baselined.fits'
+
+;;filein, fileStr
+;;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined.fits'
+filein, fileStr
+smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined_ss.fits', kernel = kern
+
+;;kern = [0.288422719, 1, 1, 0.288422719]
+;;fileStr = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+;;filein, fileStr
+;;smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline_ss.fits', kernel = kern
+
+;; beam 6
+beamNum = '6'
+;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '.fits'
+;filein, fileStr
+;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, order = 3, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam'  + beamNum + '_edge_Baselined.fits'
+
+;;filein, fileStr
+;;chanRange = [0, 900, 1800, 2000, 2300, 3150]
+;;PAF_edgeoffkeep, object, Tsys_Y = tSysData_Y[FIX(beamNum)*2], Tsys_X = tSysData_X[FIX(beamNum)*2], chanRange = chanRange, raDecLimits = [184.909, 185.661, 45.700, 46.016], fileout = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+
+kern = [0.288422719, 1, 1, 0.288422719]
+fileStr = dataPath + 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined.fits'
+filein, fileStr
+smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_Baselined_ss.fits', kernel = kern
+
+;;kern = [0.288422719, 1, 1, 0.288422719]
+;;fileStr = 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline.fits'
+;;filein, fileStr
+;;smooth_shift, object, 'AGBT17B_360_05_NGC4258_Field_Beam' + beamNum + '_edge_noBaseline_ss.fits', kernel = kern

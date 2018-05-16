@@ -1,0 +1,51 @@
+!EXCEPT=0 ;; suppress math warnings
+
+;;beam 0, 4th session; AGBT17B_360_04
+beamNum = '0'
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+fileStr = 'AGBT16B_400_04_NGC6946_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC4258_Field', Tsys_Y = 9.07, Tsys_X = 9.07, chanRange = chanRange, order = 3, fileout = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_edge_chanBlank.fits'
+
+;;beam 1, 4th session; AGBT17B_360_04
+beamNum = '1'
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+fileStr = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC4258_Field', Tsys_Y = 9.52, Tsys_X = 9.52, chanRange = chanRange, order = 3, fileout = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_edge_chanBlank.fits
+
+;;beam 2, 4th session; AGBT17B_360_04
+beamNum = '2'
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+fileStr = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC4258_Field', Tsys_Y = 9.44, Tsys_X = 9.44, chanRange = chanRange, order = 3, fileout = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_edge_chanBlank.fits
+
+;;beam 3, 4th session; AGBT17B_360_04
+beamNum = '3'
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+fileStr = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC4258_Field', Tsys_Y = 9.48, Tsys_X = 9.48, chanRange = chanRange, order = 3, fileout = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_edge_chanBlank.fits
+
+;;beam 4, 4th session; AGBT17B_360_04
+beamNum = '4'
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+fileStr = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC4258_Field', Tsys_Y = 9.49, Tsys_X = 9.49, chanRange = chanRange, order = 3, fileout = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_edge_chanBlank.fits
+
+;;beam 5, 4th session; AGBT17B_360_04
+beamNum = '5'
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+fileStr = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC4258_Field', Tsys_Y = 9.31, Tsys_X = 9.31, chanRange = chanRange, order = 3, fileout = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_edge_chanBlank.fits
+
+;;beam 6, 4th session; AGBT17B_360_04
+beamNum = '6'
+chanRange = [0, 900, 1800, 2000, 2300, 3150]
+fileStr = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_chanBlank.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'NGC4258_Field', Tsys_Y = 9.48, Tsys_X = 9.48, chanRange = chanRange, order = 3, fileout = 'AGBT17B_360_04_NGC4258_Field_Beam' + beamNum + '_edge_chanBlank.fits
+

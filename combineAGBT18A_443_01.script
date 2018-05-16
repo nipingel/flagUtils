@@ -1,0 +1,9 @@
+.compile PAF_combineDither
+
+PAF_combineDither, 'W49B', fileout='AGBT18A_443_01_W49_Beam0_Comb.fits', bm='0', sess = '1', wtHighLO = 1/23.51^2, wtLowLO = 1/20.61^2
+PAF_combineDither, 'W49B', fileout='AGBT18A_443_01_W49_Beam1_Comb.fits', bm='1', sess = '1', wtHighLO = 1/25.56^2, wtLowLO = 1/21.84^2
+PAF_combineDither, 'W49B', fileout='AGBT18A_443_01_W49_Beam2_Comb.fits', bm='2', sess = '1', wtHighLO = 1/25.90^2, wtLowLO = 1/20.97^2
+PAF_combineDither, 'W49B', fileout='AGBT18A_443_01_W49_Beam3_Comb.fits', bm='3', sess = '1', wtHighLO = 1/26.56^2, wtLowLO = 1/21.33^2
+PAF_combineDither, 'W49B', fileout='AGBT18A_443_01_W49_Beam4_Comb.fits', bm='4', sess = '1', wtHighLO = 1/23.10^2, wtLowLO = 1/21.94^2
+PAF_combineDither, 'W49B', fileout='AGBT18A_443_01_W49_Beam5_Comb.fits', bm='5', sess = '1', wtHighLO = 1/25.27^2, wtLowLO = 1/21.29^2
+PAF_combineDither, 'W49B', fileout='AGBT18A_443_01_W49_Beam6_Comb.fits', bm='6', sess = '1', wtHighLO = 1/25.42^2, wtLowLO = 1/21.85^2

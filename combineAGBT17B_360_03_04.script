@@ -1,0 +1,9 @@
+.compile PAF_combineDither
+
+PAF_combineDither, 'NGC4258_Field', fileout='AGBT17B_360_NGC4258_Field_03_04_Beam0_Comb.fits', bm = '0', sess = '1', wtHighLO = 1/9.07^2, wtLowLO = 1/16.36^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam1_Comb.fits', bm = '1', sess = '1', wtHighLO = 1/13.91^2, wtLowLO = 1/15.01^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam2_Comb.fits', bm = '2', sess = '1', wtHighLO = 1/13.45^2, wtLowLO = 1/14.42^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam3_Comb.fits', bm = '3', sess = '1', wtHighLO = 1/15.41^2, wtLowLO = 1/14.65^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam4_Comb.fits', bm = '4', sess = '1', wtHighLO = 1/16.02^2, wtLowLO = 1/14.88^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam5_Comb.fits', bm = '5', sess = '1', wtHighLO = 1/16.14^2, wtLowLO = 1/14.77^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam6_Comb.fits', bm = '6', sess = '1', wtHighLO = 1/16.42^2, wtLowLO = 1/14.75^2

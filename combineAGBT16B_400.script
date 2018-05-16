@@ -1,0 +1,20 @@
+.compile PAF_combineDither
+
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam0_edge_Comb.fits', bm = '0', sess = '1', wtHighLO = 1/12.51^2, wtLowLO = 1/13.73^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam1_edge_Comb.fits', bm = '1', sess = '1', wtHighLO = 1/13.91^2, wtLowLO = 1/15.01^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam2_edge_Comb.fits', bm = '2', sess = '1', wtHighLO = 1/13.45^2, wtLowLO = 1/14.42^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam3_edge_Comb.fits', bm = '3', sess = '1', wtHighLO = 1/15.41^2, wtLowLO = 1/14.65^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam4_edge_Comb.fits', bm = '4', sess = '1', wtHighLO = 1/16.02^2, wtLowLO = 1/14.88^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam5_edge_Comb.fits', bm = '5', sess = '1', wtHighLO = 1/16.14^2, wtLowLO = 1/14.77^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam6_edge_Comb.fits', bm = '6', sess = '1', wtHighLO = 1/16.42^2, wtLowLO = 1/14.75^2
+
+;; instead of weighting by the equivalent system flux density, weight by inverse square of percent difference of the total flux measured over 210 to
+;; 18 km/s between the PAF data (sessions 12 and 13), and the single pixel data
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam0_edge_Comb.fits', bm = '0', sess = '1', wtHighLO = 1/16.88^2, wtLowLO = 1/34.60^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam1_edge_Comb.fits', bm = '1', sess = '1', wtHighLO = 1/10.34^2, wtLowLO = 1/33.12^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam2_edge_Comb.fits', bm = '2', sess = '1', wtHighLO = 1/4.85^2, wtLowLO = 1/22.57^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam3_edge_Comb.fits', bm = '3', sess = '1', wtHighLO = 1/0.21^2, wtLowLO = 1/16.24^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam4_edge_Comb.fits', bm = '4', sess = '1', wtHighLO = 1/7.81^2, wtLowLO = 1/32.07^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam5_edge_Comb.fits', bm = '5', sess = '1', wtHighLO = 1/9.07^2, wtLowLO = 1/26.79^2
+PAF_combineDither, 'NGC6946', fileout='AGBT16B_400_NGC6946_Beam6_edge_Comb.fits', bm = '6', sess = '1', wtHighLO = 1/0.21^2, wtLowLO = 1/33.33^2
+

@@ -1,0 +1,106 @@
+;; script to run PAF_edgeoff on all data collected during AGBT17B_360 (Jan-Feb 2018) FLAG run
+;; Writte;n by: Nick Pingel (03/6/18)
+;; user m;ay have to change the project, object, fileStr path, and tSysPathX/Y variables below to point towards the collection of FITS files one wishes to process
+.compile ;PAF_edgeoffkeep.pro
+.compile ;smooth_shift.pro
+
+!EXCEPT=0 ;; suppress math warnings
+
+;; beam 0, 1st session
+beamNum = '0'
+;;chanRange = [350, 800, 850, 1100, 1400, 1990, 2600, 2790, 2900, 3150]
+chanRange=[350, 750, 1400, 1900, 2600, 3150]
+fileStr =  'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_1st.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 23.51, Tsys_X = 23.51, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_1st.fits'
+
+;; beam 0, 2nd session
+beamNum = '0'
+chanRange = [350, 500, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_2nd.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 20.61, Tsys_X = 20.61, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_2nd.fits'
+
+;; beam 1, 1st session
+beamNum = '1'
+chanRange=[350, 750, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_1st.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 25.56, Tsys_X = 25.56, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_1st.fits'
+
+;; beam 1, 2nd session
+beamNum = '1'
+chanRange = [350, 500, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_2nd.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 21.81, Tsys_X = 21.81, chanRange = chanRange, order = 3, fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_2nd.fits
+
+;; beam 2, 1st session
+beamNum = '2'
+chanRange=[350, 750, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_1st.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 25.90, Tsys_X = 25.90, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_1st.fits'
+
+;; beam 2, 2nd session
+beamNum = '2'
+chanRange = [350, 500, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_2nd.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 20.97, Tsys_X = 20.97, chanRange = chanRange, order = 3, fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_2nd.fits
+
+;; beam 3, 1st session
+beamNum = '3'
+chanRange=[350, 750, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_1st.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 26.56, Tsys_X = 26.56, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_1st.fits'
+
+;; beam 3, 2nd session
+beamNum = '3'
+chanRange = [350, 500, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_2nd.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 21.33, Tsys_X = 21.33, chanRange = chanRange, order = 3, fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_2nd.fits
+
+;; beam 4, 1st session
+beamNum = '4'
+chanRange=[350, 750, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_1st.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 23.10, Tsys_X = 23.10, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_1st.fits'
+
+;; beam 4, 2nd session
+beamNum = '4'
+chanRange = [350, 500, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_2nd.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 21.94, Tsys_X = 21.94, chanRange = chanRange, order = 3, fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_2nd.fits
+
+;; beam 5, 1st session
+beamNum = '5'
+chanRange=[350, 750, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_1st.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 25.27, Tsys_X = 25.27, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_1st.fits'
+
+;; beam 5, 2nd session
+beamNum = '5'
+chanRange = [350, 500, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_2nd.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 21.29, Tsys_X = 21.29, chanRange = chanRange, order = 3, fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_2nd.fits
+
+;; beam 6, 1st session
+beamNum = '6'
+chanRange=[350, 750, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_1st.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 25.42, Tsys_X = 25.42, chanRange = chanRange, order = 3, badScans = [92, 93, 94, 95, 96, 97], fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_1st.fits'
+
+;; beam 6, 2nd session
+beamNum = '6'
+chanRange = [350, 500, 1400, 1900, 2600, 3150]
+fileStr = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_chanBlank_2nd.fits'
+filein, fileStr
+PAF_edgeoffkeep, 'W49B', Tsys_Y = 21.85, Tsys_X = 21.85, chanRange = chanRange, order = 3, fileout = 'AGBT18A_443_01_W49B_Beam' + beamNum + '_edge_chanBlank_2nd.fits
